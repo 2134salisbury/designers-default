@@ -500,16 +500,16 @@ body {
 	}
 
 	#wp-calendar caption {
-		font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+		font-size: 1.3em;
+		font-weight: bold;
 		text-align: center;
 		text-decoration: none;
-		text-align: center;
-		width: 100%;
 	}
 
 	#wp-calendar th {
 		font-style: normal;
 		text-transform: capitalize;
+		text-align: center;
 	}
 
 	#wp-calendar td {

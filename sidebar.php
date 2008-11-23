@@ -42,11 +42,11 @@
 
 			<?php wp_list_pages('title_li=<h2>Pages</h2>' ); ?>
 			
-			<?php get_calendar(); ?>  
+			<li><?php get_calendar(); ?></li>
 
 			<li><h2>Archives</h2>
 				<ul>
-				<?php wp_get_archives('type=monthly'); ?>
+					<?php wp_get_archives('type=monthly'); ?>
 				</ul>
 			</li>
 
@@ -55,7 +55,7 @@
 			
 			<li><h2>Tag Cloud</h2>
 				<ul>
-				<?php wp_tag_cloud(''); ?>
+					<?php wp_tag_cloud(''); ?>
 				</ul>
 			</li>			
 
