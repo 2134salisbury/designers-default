@@ -55,7 +55,7 @@
 			
 			<li><h2>Tag Cloud</h2>
 				<ul>
-					<?php wp_tag_cloud(''); ?>
+					<li><?php wp_tag_cloud(''); ?></li>
 				</ul>
 			</li>			
 

@@ -184,7 +184,7 @@ strike {
 body {
 	font-size: 62.5%; /* Resets 1em to 10px */
 	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-	background: #ebecee;
+	background: #eee;
 	color: #333;
 	text-align: center;
 	margin: 0 0 20px 0;
@@ -218,22 +218,25 @@ body {
 		}
 		
 			#headerimg 	{
-				background: #73a0c5 url('images/header_window.png') no-repeat bottom center;
+				background: #73a0c5 url('images/feed.png') bottom center;
 				margin: 0px 14px;
 				height: 194px;
 			}
-		
-				#headerimg .description {
+				#header .description {
 					font-size: 1.2em;
 					text-align: center;
 					text-decoration: none;
 					color: white;
 				}
+				#header_window 	{
+					background: url('images/header_window.png') no-repeat bottom center;
+					height: 194px;
+				}
 				
 /* CONTENT */
 
 		#main_wrapper {
-			background: #ffffff url('images/page_background.png') repeat-y top center;
+			background: url('images/page_background.png') repeat-y top center;
 			margin: 0;
 		}
 			#content {
@@ -250,11 +253,8 @@ body {
 				
 				.widecolumn {
 					padding: 10px 0 20px 0;
-					margin: 5px 20px 0 20px;
+					margin: 0px 20px 0 20px;
 				}
-					.widecolumn .post {
-						margin: 0;
-					}
 					.widecolumn .postmetadata {
 						margin: 30px 0;
 					}
@@ -283,6 +283,12 @@ body {
 				}
 					.post hr {
 						display: block;
+					}
+					.post p img {
+						padding: 10px;
+					}
+					.post p {
+						line-height: 1.5em;
 					}
 /* ENTRY */			
 					.entry {}
@@ -317,13 +323,22 @@ body {
 						.entry form { /* This is mainly for password protected posts, makes them look better. */
 							text-align:center;
 						}
-						.post p img {
-							padding: 10px;
-						}
 						.postmetadata {
 							color: #777;
-							clear:both;
+							clear: both;
+							font-size: .95em;
 						}
+							.postmetadata dt{
+								float: left;
+								font-weight: bold;
+								margin-bottom: 5px;
+								padding-right: 5px;
+							}
+							.postmetadata dd{
+								margin-bottom: 5px;
+								float: left;
+								padding-right: 10px;
+							}
 							.postmetadata ul, .postmetadata li {
 								display: inline;
 								list-style-type: none;
@@ -471,7 +486,7 @@ body {
 			padding: 0;
 			margin: 0 auto;
 			clear: both;
-			background: #eee url('images/footer_background.png') no-repeat bottom center;
+			background: url('images/footer_background.png') no-repeat bottom center;
 		}
 
 			#footer p {

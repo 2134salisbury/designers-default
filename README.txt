@@ -17,6 +17,9 @@ Code Changes
 7) Post content broken out into seperate template to reduce repetition
 8) Navigation content broken out into seperate template to reduce repetition
 9) About template broken out to make it easier for beginners to edit.
+10) XHTML 1.0 Strict doctype
+11) Moved About Post data into definition lists
+12) Comments put on each template so you can tell what to edit by looking at the source.
 
 
 ***************
@@ -26,3 +29,6 @@ Design Changes
 1) Header broken into layered transparent images so you can change the color with a simple hex
 2) Page frame broken into layered transparent images so you can change the color of the background with a simple hex
 3) Added RSS Icons to footer.
+4) Added Calendar and Tag Cloud added to sidebar and styled.
+5) Page width expanded to 1024px which is the standard in page size currently.
+6) Line height on paragraph increased to 1.5

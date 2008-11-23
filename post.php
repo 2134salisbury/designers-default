@@ -8,7 +8,16 @@
 		<?php the_content('Read the rest of this entry &raquo;'); ?>
 	</div>
 
-	<p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
+		
+	<dl class="postmetadata">
+		<?php the_tags('<dt>Tags:</dt><dd>', ', ', '</dd>'); ?>
+		<dt>Category:</dt>
+		<dd><?php the_category(', ') ?></dd>
+		<dt>Comments:</dt>
+		<dd><?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></dd>
+	</dl>
+	
+	<?php edit_post_link('Edit', '<div id="admin_edit_link">', '</div>'); ?>
 	
 </div>
 <!-- post.php end -->

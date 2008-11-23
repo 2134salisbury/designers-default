@@ -1,3 +1,5 @@
+<!-- index.php start -->
+
 <?php get_header(); ?>
 
 		<div id="main_wrapper">
@@ -33,3 +35,5 @@
 		</div>
 
 <?php get_footer(); ?>
+
+<!-- index.php end -->
