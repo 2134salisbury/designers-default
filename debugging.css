@@ -1,0 +1,14 @@
+/*
+	Diagnostic Styling
+	http://meyerweb.com/eric/thoughts/2007/09/07/diagnostic-styling/
+*/
+
+* { border: 1px solid #f00; }
+
+
+img {outline: 5px solid red;}
+img[alt][title] {outline-width: 0;}
+img[alt] {outline-color: fuchsia;}
+img[alt], img[title] {outline-style: double;}
+img[alt=""][title], img[alt][title=""] {outline-width: 3px;}
+img[alt=""][title=""] {outline-style: dotted;}

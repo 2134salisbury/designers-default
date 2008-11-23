@@ -1,0 +1,579 @@
+/*
+Theme Name: Designers Default
+Theme URI: http://www.poweredbygeek/
+Description: Based on the default Wordpress theme by Michael Heilemann (http://binarybonsai.com/), this theme is redone to be a starting place for web designers.
+Version: 1.0
+Author: Lynn Wallenstein
+Author URI: http://www.poweredbygeek.com/
+Tags: blue, custom header, fixed width, two columns, widgets
+*/
+
+/****** GLOBAL ******/
+
+p, dl, hr, ol, ul, pre, table, address, fieldset {
+	margin-bottom: 20px;
+}
+
+/* HEADERS */
+
+h1 {
+	font-weight: 100;
+	font-size: 4em;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	padding-top: 70px;
+	margin: 0 0 5px 0;
+}
+	h1 a, h1 a:hover, h1 a:visited{
+		text-decoration: none;
+		color: white;
+	}
+
+h2 {
+	margin: 30px 0 0;
+	font-weight: bold;
+	font-size: 1.6em;
+	color: #333;
+}
+	h2 a, h2 a:visited {
+		color: #333;
+		text-decoration: none;
+	}
+	h2 a:hover {
+		color: #06c;
+	}
+	h2.pagetitle {
+		margin-top: 30px;
+		text-align: center;
+	}
+
+h3 {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #333;
+	padding: 0;
+	margin: 30px 0 0;
+}
+	h3 a, h3 a:visited {
+		color: #333;
+		text-decoration: none;
+	}
+	h3 a:hover {
+		color: #06c;
+	}
+	h3.comments {
+		padding: 0;
+		margin: 40px auto 20px ;
+	}
+
+/* LINKS */
+
+a {
+	color: #06c;
+	text-decoration: none;
+}
+	a:hover {
+		color: #147;
+		text-decoration: underline;
+	}
+	a img {
+		border: none;
+	}
+	
+	
+/*  RANDOM - LISTED ALPHABETICALLY */
+
+
+abbr {
+	border-bottom: 1px dashed #999;
+	cursor: help;
+	font-size: 0.9em;
+	letter-spacing: .07em;
+}
+
+acronym {
+	border-bottom: 1px dashed #999;
+	cursor: help;
+	font-size: 0.9em;
+	letter-spacing: .07em;
+}
+
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border-left: 5px solid #ddd;
+	color: #777;
+}
+	blockquote cite {
+		margin: 5px 0 0;
+		display: block;
+	}
+
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+}
+
+hr {
+	display: none;
+}
+
+ol li {
+	list-style: decimal outside;
+}
+
+select {
+	width: 130px;
+}
+
+small {
+	font-size: 0.9em;
+	line-height: 1.5em;
+	color: #777;
+}
+
+span {}
+	span.caps {
+		cursor: help;
+		font-size: 0.9em;
+		letter-spacing: .07em;
+	}
+
+strike {
+	color: #777;
+}
+
+
+/* VARIOUS TAGS AND CLASSS - LISTED ALPHABETICALLY */
+
+.aligncenter, div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
+
+
+
+
+
+
+
+
+/****** STRUCTURE ******/
+
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background: #ebecee;
+	color: #333;
+	text-align: center;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+/* PAGE */
+
+	#page {
+		text-align: left;
+		margin: 20px auto;
+		padding: 0;
+	}
+		.ltr {
+			background: url('images/page_background_ltr.png');
+		}
+	
+		.rtl {
+			background: url('images/page_background_rtl.png');
+		}
+
+/* HEADER */
+
+		#header {
+			background: url('images/header_background.png') no-repeat top center;
+			margin: 0;
+			padding: 0px;
+			padding-top: 10px;
+			height: 194px;
+			width: 960px;
+		}
+		
+			#headerimg 	{
+				background: #73a0c5 url('images/header_window.png') no-repeat bottom center;
+				margin: 0px 14px;
+				height: 194px;
+			}
+		
+				#headerimg .description {
+					font-size: 1.2em;
+					text-align: center;
+					text-decoration: none;
+					color: white;
+				}
+				
+/* CONTENT */
+
+		#main_wrapper {
+			background: #ffffff url('images/page_background.png') repeat-y top center;
+			margin: 0;
+		}
+			#content {
+				font-size: 1.2em
+			}
+				.narrowcolumn {
+					float: left;
+					padding: 0 0 20px 45px;
+					margin: 0px 0 0;
+				}
+					.narrowcolumn .postmetadata {
+						padding-top: 5px;
+					}
+				
+				.widecolumn {
+					padding: 10px 0 20px 0;
+					margin: 5px 20px 0 20px;
+				}
+					.widecolumn .post {
+						margin: 0;
+					}
+					.widecolumn .postmetadata {
+						margin: 30px 0;
+					}
+					
+					.widecolumn .smallattachment {
+						text-align: center;
+						float: left;
+						width: 128px;
+						margin: 5px 5px 5px 0px;
+					}
+					
+					.widecolumn .attachment {
+						text-align: center;
+						margin: 5px 0px;
+					}
+			.navigation {
+				display: block;
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 60px;
+			}
+/* POST */
+				.post {
+					margin: 0 0 40px;
+					text-align: justify;				
+				}
+					.post hr {
+						display: block;
+					}
+/* ENTRY */			
+					.entry {}
+						.entry p a:visited {
+							color: #b85b5a;
+						}
+						/* DOES NOT WORK ON IE, GOES BACK TO REGULAR BULLETS START */
+						html>body .entry ul {
+							margin-left: 0px;
+							padding: 0 0 0 30px;
+							list-style: none;
+							padding-left: 10px;
+							text-indent: -10px;
+							}
+						
+						html>body .entry li {
+							margin: 7px 0 8px 10px;
+						}
+						/* DOES NOT WORK ON IE END */
+						.entry ul li:before {
+							content: "\00BB \0020";
+						}
+						.entry ol {
+							padding: 0 0 0 35px;
+							margin: 0;
+						}
+						
+						.entry ol li {
+							margin: 0;
+							padding: 0;
+						}
+						.entry form { /* This is mainly for password protected posts, makes them look better. */
+							text-align:center;
+						}
+						.postmetadata {
+							color: #777;
+							clear:both;
+						}
+							.postmetadata ul, .postmetadata li {
+								display: inline;
+								list-style-type: none;
+								list-style-image: none;
+							}
+						.alt {
+							background-color: #f8f8f8;
+							border-top: 1px solid #ddd;
+							border-bottom: 1px solid #ddd;
+							margin: 0;
+							padding: 10px;
+						}
+/* COMMENTLIST */					
+					.commentlist {
+						padding: 0;
+						text-align: justify;
+					}
+						.commentlist li {
+							font-weight: bold;
+							margin: 15px 0 3px;
+							padding: 5px 10px 3px;
+							list-style: none;
+						}
+						.commentlist li .avatar { 
+							float: right;
+							border: 1px solid #eee;
+							padding: 2px;
+							background: #fff;
+						}
+						.commentlist cite, .commentlist cite a {
+							font-weight: bold;
+							font-style: normal;
+							font-size: 1.1em;
+						}
+						.commentlist p {
+							font-weight: normal;
+							line-height: 1.5em;
+							text-transform: none;
+							margin: 10px 5px 10px 0;
+						}
+						.commentlist li, #commentform input, #commentform textarea {
+							font-size: 0.9em;
+						}
+						.commentmetadata {
+							font-weight: normal;
+							margin: 0;
+							display: block;
+						}
+	
+	
+						
+					#commentform {}
+						#commentform input {
+							width: 170px;
+							padding: 2px;
+							margin: 5px 5px 1px 0;
+						}
+						#commentform p {
+							margin: 5px 0;
+						}
+						#commentform textarea {
+							width: 100%;
+							padding: 2px;
+						}
+						
+						#commentform #submit {
+							margin: 0;
+							float: right;
+						}
+					.nocomments {
+						text-align: center;
+						margin: 0;
+						padding: 0;
+						color: #777;
+					}
+/* SIDEBAR */		
+			#sidebar {
+				padding: 20px 0 10px 0;
+				float: right;
+			}
+				#sidebar h2 {
+					font-size: 1.2em;
+					margin: 5px 0 0;
+					padding: 0;
+					text-decoration: none;
+				}
+	
+				#sidebar form {
+					margin: 0;
+				}
+				#searchform {
+					margin: 10px auto;
+					padding: 5px 3px;
+					text-align: center;
+				}
+				
+					#sidebar #searchform #s {
+						width: 108px;
+						padding: 2px;
+					}
+				
+				#sidebar #searchsubmit {
+					padding: 1px;
+				}
+				
+				#sidebar ul, #sidebar ul ol {
+					margin: 0;
+					padding: 0;
+				}
+					
+				#sidebar ul li {
+					list-style-type: none;
+					list-style-image: none;
+					margin-bottom: 15px;
+				}
+				
+				#sidebar ul p, #sidebar ul select {
+					margin: 5px 0 8px;
+				}
+				
+				#sidebar ul ul, #sidebar ul ol {
+					margin: 5px 0 0 10px;
+				}
+				
+				#sidebar ul ul ul, #sidebar ul ol {
+					margin: 0 0 0 10px;
+				}
+				
+				#sidebar ul ol li {
+					list-style: decimal outside;
+				}
+				
+				#sidebar ul ul li, #sidebar ul ol li {
+					margin: 3px 0 0;
+					padding: 0;
+					color: #777;
+				}
+				#sidebar ul ul li:before {
+						content: "\00BB \0020";
+				}
+
+/* FOOTER */
+
+		#footer {
+			padding: 0;
+			margin: 0 auto;
+			clear: both;
+			background: #eee url('images/footer_background.png') no-repeat bottom center;
+		}
+
+			#footer p {
+				margin: 0;
+				padding: 20px 0;
+				text-align: center;
+			}
+
+
+/****** CALENDAR ******/
+
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+}
+
+	#wp-calendar a {
+		text-decoration: none;
+		display: block;
+	}
+
+	#wp-calendar caption {
+		font: bold 1.3em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+		text-align: center;
+		text-decoration: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	#wp-calendar th {
+		font-style: normal;
+		text-transform: capitalize;
+	}
+
+	#wp-calendar td {
+		padding: 3px 0;
+		text-align: center;
+	}
+	
+		#wp-calendar td.pad:hover { /* Doesn't work in IE */
+			background-color: #fff; 
+		}
+
+	#wp-calendar #next a {
+		padding-right: 10px;
+		text-align: right;
+		font-size: 9pt;
+	}
+	
+	#wp-calendar #prev a {
+		padding-left: 10px;
+		text-align: left;
+		font-size: 9pt;
+	}
+
+
+/****** IMAGES ******/
+
+p img {
+	padding: 10px;
+	max-width: 100%;
+	}
+
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+}
+
+
+
+/****** CAPTIONS ******/
+
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+}
+
+	.wp-caption img {
+		margin: 0;
+		padding: 0;
+		border: 0 none;
+	}
+
+	.wp-caption p.wp-caption-text {
+		font-size: 11px;
+		line-height: 17px;
+		padding: 0 4px 5px;
+		margin: 0;
+	}
+

@@ -1,0 +1,25 @@
+/*
+Theme Name: Designers Default
+Theme URI: http://www.poweredbygeek/
+Description: Based on the default Wordpress theme, this theme is redone to be a starting place for web designers.
+Version: 1.0
+Author: Lynn Wallenstein
+Author URI: http://www.poweredbygeek.com/
+Tags: blue, custom header, fixed width, two columns, widgets
+
+*/
+
+/* Eric Meyer's Reset. You probably don't need to change that. */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+@import "reset.css";
+
+/* For use with the grid. You probably shouldn't need to change this either. */
+/* http://960.gs/ */
+@import "960.css";
+
+/* This is where you will want to do most of your changes */
+@import "main.css";
+
+/* Uncomment this for debugging */
+/* @import "debugging.css"; */ 
+
