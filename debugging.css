@@ -3,8 +3,14 @@
 	http://meyerweb.com/eric/thoughts/2007/09/07/diagnostic-styling/
 */
 
-* { border: 1px solid #f00; }
+div, * { border: 3px solid #c2c2c2; }
 
+#page { border: 3px solid pink; }
+#header { border: 3px solid blue; }
+#footer { border: 3px solid purple; }
+#sidebar { border: 3px solid orange; }
+#content { border: 3px solid yellow; }
+.post  { border: 3px solid green; }
 
 img {outline: 5px solid red;}
 img[alt][title] {outline-width: 0;}

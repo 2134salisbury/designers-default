@@ -1,20 +1,75 @@
 /*
-Theme Name: Designers Default
-Theme URI: http://www.poweredbygeek/
-Description: Based on the default Wordpress theme by Michael Heilemann (http://binarybonsai.com/), this theme is redone to be a starting place for web designers.
-Version: 1.0
-Author: Lynn Wallenstein
-Author URI: http://www.poweredbygeek.com/
-Tags: blue, custom header, fixed width, two columns, widgets
-*/
+main.css - You will probably want to do your changes here.
 
-/****** GLOBAL ******/
+/*------------------------------------------------------------------
+[Table of Contents]
 
-p, dl, hr, ol, ul, pre, table, address, fieldset {
-	margin-bottom: 20px;
+1. Global Attributes
+	1.1. Body
+	1.2. Links 
+	1.3. Headers
+	1.4  Misc - Listed Alphabetically
+2. Structure
+	2.1. Page / #page
+		+ 2.1.1 Header / #header
+		+ 2.1.2 Wrapper / #main_wrapper
+			+ 2.1.2.1 Content / #content
+				+ 2.1.2.1.1 Post / .post
+			+ 2.1.2.2 Sidebar / #sidebar
+		+ 2.1.3. Footer / #footer
+3. Component Classes
+	3.1 Calendar
+	3.2 Images
+	3.3 Captions
+4. Helpful Classes - Listed Alphabetrically
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------ 
+[Color codes] 
+
+Background: #eee (grey) 
+H1:  #ffffff (white) 
+H2:  #333 (blue) 
+Header Background Color: #333 (blue)
+a (standard):   #06c (blue) 
+a (hover): #147 (blue) 
+-------------------------------------------------------------------*/   
+
+
+
+/* `1. Global Attributes
+----------------------------------------------------------------------------------------------------*/
+
+/* 1.1 - BODY */
+
+
+body {
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background: #eee; /* CHANGE THIS COLOR TO CHANGE THE BACKGROUND OF THE PAGE */
+	color: #333;
+	text-align: center;
+	margin: 0 0 20px 0;
+	padding: 0;
 }
 
-/* HEADERS */
+
+/* 1.2 - LINKS */
+
+a {
+	color: #06c;
+	text-decoration: none;
+}
+	a:hover {
+		color: #147;
+		text-decoration: underline;
+	}
+	a img {
+		border: none;
+	}
+
+
+/* 1.3 - HEADERS */
 
 h1 {
 	font-weight: 100;
@@ -67,29 +122,17 @@ h3 {
 		margin: 40px auto 20px ;
 	}
 
-/* LINKS */
 
-a {
-	color: #06c;
-	text-decoration: none;
-}
-	a:hover {
-		color: #147;
-		text-decoration: underline;
-	}
-	a img {
-		border: none;
-	}
-	
-	
-/*  RANDOM - LISTED ALPHABETICALLY */
-
+/* 1.4 - MISC - LISTED ALPHABETICALLY */
 
 abbr {
 	border-bottom: 1px dashed #999;
 	cursor: help;
 	font-size: 0.9em;
 	letter-spacing: .07em;
+}
+address {
+	margin-bottom: 20px;
 }
 
 acronym {
@@ -113,15 +156,30 @@ blockquote {
 code {
 	font: 1.1em 'Courier New', Courier, Fixed;
 }
-
+dl {
+	margin-bottom: 20px;
+}
+dt {
+	margin-left: 10px;
+}
+fieldset {
+	margin-bottom: 20px;
+}
 hr {
 	display: none;
 }
-
+ol {
+	margin-bottom: 20px;
+}
 ol li {
 	list-style: decimal outside;
 }
-
+p {
+	margin-bottom: 20px;
+}
+pre {
+	margin-bottom: 20px;
+}
 select {
 	width: 130px;
 }
@@ -142,56 +200,18 @@ span {}
 strike {
 	color: #777;
 }
-
-
-/* VARIOUS TAGS AND CLASSS - LISTED ALPHABETICALLY */
-
-.aligncenter, div.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+table {
+	margin-bottom: 20px;
 }
-
-.alignleft {
-	float: left;
-}
-
-.alignright {
-	float: right;
-}
-
-.center {
-	text-align: center;
-}
-
-.clear {
-	clear: both;
-}
-
-.hidden {
-	display: none;
+ul {
+	margin-bottom: 20px;
 }
 
 
+/* `2. Structure
+----------------------------------------------------------------------------------------------------*/
 
-
-
-
-
-
-/****** STRUCTURE ******/
-
-body {
-	font-size: 62.5%; /* Resets 1em to 10px */
-	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-	background: #eee;
-	color: #333;
-	text-align: center;
-	margin: 0 0 20px 0;
-	padding: 0;
-}
-
-/* PAGE */
+/* 2.1 - PAGE */
 
 	#page {
 		text-align: left;
@@ -206,7 +226,7 @@ body {
 			background: url('images/page_background_rtl.png');
 		}
 
-/* HEADER */
+/* 2.1.1 - HEADER */
 
 		#header {
 			background: url('images/header_background.png') no-repeat top center;
@@ -216,29 +236,31 @@ body {
 			height: 194px;
 			width: 960px;
 		}
-		
+			#header .description {
+				font-size: 1.2em;
+				text-align: center;
+				text-decoration: none;
+				color: white;
+			}
 			#headerimg 	{
-				background: #73a0c5 url('images/feed.png') bottom center;
+				background: #333; /* CHANGE THIS COLOR OR ADD AN IMAGE TO CHANGE THE HEADER BACKGROUND - url('images/image.png') no-repeat top center; */
 				margin: 0px 14px;
 				height: 194px;
 			}
-				#header .description {
-					font-size: 1.2em;
-					text-align: center;
-					text-decoration: none;
-					color: white;
-				}
 				#header_window 	{
 					background: url('images/header_window.png') no-repeat bottom center;
 					height: 194px;
 				}
 				
-/* CONTENT */
+/* 2.1.2 - MAIN WRAPPER */
 
 		#main_wrapper {
 			background: url('images/page_background.png') repeat-y top center;
 			margin: 0;
 		}
+		
+/* 2.1.2.1 - CONTENT */
+		
 			#content {
 				font-size: 1.2em
 			}
@@ -276,7 +298,7 @@ body {
 				margin-top: 10px;
 				margin-bottom: 60px;
 			}
-/* POST */
+/* 2.1.2.1.1 - POST */
 				.post {
 					margin: 0 0 40px;
 					text-align: justify;				
@@ -290,7 +312,7 @@ body {
 					.post p {
 						line-height: 1.5em;
 					}
-/* ENTRY */			
+/* 2.1.2.1.1.1 - ENTRY */		
 					.entry {}
 						.entry p a:visited {
 							color: #b85b5a;
@@ -351,7 +373,7 @@ body {
 							margin: 0;
 							padding: 10px;
 						}
-/* COMMENTLIST */					
+/* 2.1.2.1.1.2 - COMMENTLIST */						
 					.commentlist {
 						padding: 0;
 						text-align: justify;
@@ -414,7 +436,7 @@ body {
 						padding: 0;
 						color: #777;
 					}
-/* SIDEBAR */		
+/* 2.1.2.2- SIDEBAR */		
 			#sidebar {
 				padding: 20px 0 10px 0;
 				float: right;
@@ -480,7 +502,7 @@ body {
 						content: "\00BB \0020";
 				}
 
-/* FOOTER */
+/* 2.1.3.2- FOOTER */
 
 		#footer {
 			padding: 0;
@@ -500,8 +522,12 @@ body {
 				text-align: center;
 				padding-bottom: 20px;
 			}
+			
+			
+/* `3. Components
+----------------------------------------------------------------------------------------------------*/			
 
-/****** CALENDAR ******/
+/* 3.1 - CALENDAR */
 
 #wp-calendar {
 	empty-cells: show;
@@ -549,7 +575,7 @@ body {
 	}
 
 
-/****** IMAGES ******/
+/* 3.2 - IMAGES */
 
 p img {
 	max-width: 100%;
@@ -575,7 +601,7 @@ img.alignleft {
 
 
 
-/****** CAPTIONS ******/
+/* 3.3 - CAPTIONS */
 
 
 .wp-caption {
@@ -598,4 +624,35 @@ img.alignleft {
 		padding: 0 4px 5px;
 		margin: 0;
 	}
+
+
+
+/* `3. Helpful Classes - Listed Alphaberically
+----------------------------------------------------------------------------------------------------*/	
+
+.aligncenter, div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+.hidden {
+	display: none;
+}
 

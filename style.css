@@ -2,7 +2,7 @@
 Theme Name: Designers Default
 Theme URI: http://www.poweredbygeek/
 Description: Based on the default Wordpress theme, this theme is redone to be a starting place for web designers.
-Version: 1.0
+Version: 0.3
 Author: Lynn Wallenstein
 Author URI: http://www.poweredbygeek.com/
 Tags: blue, custom header, fixed width, two columns, widgets
@@ -17,9 +17,9 @@ Tags: blue, custom header, fixed width, two columns, widgets
 /* http://960.gs/ */
 @import "960.css";
 
-/* This is where you will want to do most of your changes */
+/******* This is where you will want to do most of your changes ******/
 @import "main.css";
 
 /* Uncomment this for debugging */
-/* @import "debugging.css"; */ 
+/* @import "debugging.css"; */
 
