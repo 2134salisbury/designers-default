@@ -317,6 +317,9 @@ body {
 						.entry form { /* This is mainly for password protected posts, makes them look better. */
 							text-align:center;
 						}
+						.post p img {
+							padding: 10px;
+						}
 						.postmetadata {
 							color: #777;
 							clear:both;
@@ -473,10 +476,15 @@ body {
 
 			#footer p {
 				margin: 0;
-				padding: 20px 0;
+				padding: 20px 0 10px 0;
 				text-align: center;
 			}
-
+			
+			#footer_rss_links {
+				line-height: 16px;
+				text-align: center;
+				padding-bottom: 20px;
+			}
 
 /****** CALENDAR ******/
 
@@ -529,7 +537,6 @@ body {
 /****** IMAGES ******/
 
 p img {
-	padding: 10px;
 	max-width: 100%;
 	}
 
