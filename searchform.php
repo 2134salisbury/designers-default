@@ -1,3 +1,5 @@
+<!-- searchform.php end -->
+
 <form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
 	<fieldset>
 		<label class="hidden" for="s"><?php _e('Search for:'); ?></label>
@@ -7,3 +9,5 @@
 		</div>
 	</fieldset>
 </form>
+
+<!-- searchform.php end -->
