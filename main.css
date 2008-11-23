@@ -30,8 +30,8 @@ main.css - You will probably want to do your changes here.
 Background: #eee (grey) 
 H1:  #ffffff (white) 
 H2:  #333 (blue) 
-Header Background Color: #333 (blue)
-a (standard):   #06c (blue) 
+Header Background Color: #73a0c5 (blue)
+a (standard):   #73a0c5 (blue) 
 a (hover): #147 (blue) 
 -------------------------------------------------------------------*/   
 
@@ -57,7 +57,7 @@ body {
 /* 1.2 - LINKS */
 
 a {
-	color: #06c;
+	color: #73a0c5;
 	text-decoration: none;
 }
 	a:hover {
@@ -243,7 +243,7 @@ ul {
 				color: white;
 			}
 			#headerimg 	{
-				background: #333; /* CHANGE THIS COLOR OR ADD AN IMAGE TO CHANGE THE HEADER BACKGROUND - url('images/image.png') no-repeat top center; */
+				background: #73a0c5; /* CHANGE THIS COLOR OR ADD AN IMAGE TO CHANGE THE HEADER BACKGROUND - url('images/image.png') no-repeat top center; */
 				margin: 0px 14px;
 				height: 194px;
 			}
